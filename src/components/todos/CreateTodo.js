@@ -13,6 +13,8 @@ class CreateTodo extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.addTodo(this.state)
+    // erasing text (setting to an empty string) after submitting
+    this.setState({text: ''})
   }
 
   handleChange(event) {
