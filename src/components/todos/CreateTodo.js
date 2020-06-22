@@ -13,9 +13,10 @@ class CreateTodo extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.addTodo(this.state)
-    // this.setState({
-    //   text: '',
-    // })
+    // reset component's state each time we submit a to do
+    this.setState({
+      text: '',
+    })
   }
 
   handleChange(event) {
